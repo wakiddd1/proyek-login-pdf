@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="error-page-body">
+
+    <div class="error-container">
+        <img src="/img/warning-illustration.svg" alt="Ilustrasi Peringatan" class="error-illustration">
+        
+        <h2 class="error-title">Oops! Ada yang Kurang</h2>
+        <p class="error-message-detail"><%= errorMessage %></p>
+        
+        <a href="javascript:history.back()" class="error-back-button">Kembali</a>
+    </div>
+
+</body>
+</html>

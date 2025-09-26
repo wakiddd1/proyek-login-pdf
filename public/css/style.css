@@ -1,0 +1,198 @@
+/* --- Reset & Pengaturan Dasar --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Latar belakang gambar pertambangan */
+    background: url('/img/mining-background.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Pastikan gambar memenuhi seluruh layar */
+    display: flex; /* Gunakan flexbox untuk menempatkan di tengah */
+    justify-content: center; /* Horisontal tengah */
+    align-items: center; /* Vertikal tengah */
+    min-height: 100vh; /* Pastikan tinggi body penuh */
+    color: #333;
+    overflow: auto; /* Agar bisa discroll jika konten lebih besar dari viewport */
+}
+
+/* --- Kartu Login/Registrasi --- */
+.login-card {
+    background: rgba(255, 255, 255, 0.95); /* Latar belakang kartu semi-transparan putih */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Bayangan lebih gelap */
+    width: 100%;
+    max-width: 450px; /* Sedikit lebih lebar */
+    text-align: center;
+    backdrop-filter: blur(5px); /* Efek blur pada background di belakang kartu */
+    -webkit-backdrop-filter: blur(5px); /* Untuk kompatibilitas Safari */
+}
+
+.login-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333; /* Warna teks yang kontras */
+}
+
+.login-card .subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* --- Formulir --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] { /* Tambahkan jika ada input email */
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #d4af37; /* Warna emas/kuning untuk tema tambang */
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3); /* Bayangan fokus */
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #d4af37; /* Warna emas/kuning */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #c29d30; /* Warna lebih gelap saat disentuh */
+    transform: translateY(-2px); /* Efek sedikit mengangkat */
+}
+
+/* --- Link Pindah Halaman (Register/Login) --- */
+.switch-auth {
+    margin-top: 30px;
+    font-size: 15px;
+    color: #666;
+}
+
+.switch-auth a {
+    color: #d4af37; /* Warna emas/kuning */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+}
+
+/* --- Dashboard/PDF Viewer Styles --- */
+/* (Anda bisa menyimpan style ini atau menghapusnya jika sudah dipindahkan ke file terpisah) */
+.user-info-corner {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #333333; /* Warna solid */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.logout-link {
+    color: #ffdddd;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.logout-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.pdf-container {
+    margin-top: 0;
+    width: 100%;
+    height: 100vh;
+}
+/* --- Halaman Error Khusus --- */
+.error-page-body {
+    background: #f8f9fa; /* Latar belakang abu-abu muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.error-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.error-illustration {
+    width: 100%;
+    max-width: 300px; /* Atur ukuran gambar */
+    margin-bottom: 30px;
+}
+
+.error-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.error-message-detail {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.error-back-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #667eea; /* Warna yang sama dengan tombol login */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px; /* Membuat tombol berbentuk pil */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.error-back-button:hover {
+    background: #5a6ed8;
+    transform: translateY(-2px);
+}
