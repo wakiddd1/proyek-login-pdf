@@ -7,12 +7,14 @@ const bcrypt = require('bcryptjs');
 const app = express();
 const PORT = 3000;
 
-// Konfigurasi koneksi database
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'db_webapp_pdf'
+    host: process.env.MYSQLHOST,     // Nama variabel dari Railway
+    user: process.env.MYSQLUSER,     // Nama variabel dari Railway
+    password: process.env.MYSQLPASSWORD, // Nama variabel dari Railway
+    database: process.env.MYSQLDATABASE, // Nama variabel dari Railway
+    port: process.env.MYSQLPORT,         // Nama variabel dari Railway
+    // PlanetScale memerlukan SSL, tapi Railway biasanya tidak saat koneksi internal
+    // jadi kita hapus bagian ssl
 });
 
 // Melakukan koneksi ke database
